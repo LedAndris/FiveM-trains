@@ -11,9 +11,9 @@ if HasEntityCollidedWithAnything(NetworkGetEntityFromNetworkId(v.engine)) then
         print('Entity collided, stopping train')
         SetTrainSpeed(NetToVeh(v.engine), 0.00)
         while GetEntitySpeed(NetToVeh(v.engine)) > 1.00 do
-            SetTrainSpeed(NetToVeh(v.engine), 0.00)
+            SetTrainSpeed(NetToVeh(v.engine), 0.00) --the train stops immediately, I will probably fix it soon, but wont upload it here until november cuz I forgot abt it
             Wait(100)
-        end
+        end --this loop is needed otherwise the train would only stop for a few seconds (this loop is the reason why it stops instantly)
         print('Train stopped')
         local left = 10000
         while left ~= 0 do
@@ -21,10 +21,10 @@ if HasEntityCollidedWithAnything(NetworkGetEntityFromNetworkId(v.engine)) then
             SetTrainSpeed(NetToVeh(v.engine), 0.00)
             Wait(10)
         end
-        print('Train started')
+        print('Train started') --debug prints (not configable of course)
         SetTrainSpeed(NetToVeh(v.engine), config.speed)
         SetTrainCruiseSpeed(NetToVeh(v.engine), config.speed)
-        Wait(20000)
+        Wait(20000) --cooldown
     end
 end
 end
