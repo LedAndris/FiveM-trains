@@ -1,5 +1,5 @@
 # FiveM-trains
-Shitcoded, and barely working FiveM train system (for personal use, but I uploaded in case anyone wants to see bad examples to coding) [strings are written in hungarian, maybe I will translate it some time]
+Shitcoded, and barely working FiveM train system (for personal use, but I uploaded in case anyone wants to see bad examples to coding) [strings are written in Hungarian, maybe I will translate it some time]
 # Problems: <br>
 1. Random usage NetToVeh, VehToNet, NetworkGetEntityFromNetworkId, NetworkGetNetworkIdFromEntity usages (mixed up for worse readability ofc) <br>
 2. Unoptimized (but it runs pretty smooth)
