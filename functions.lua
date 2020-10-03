@@ -69,7 +69,7 @@ function getTrainCarts(train)
 function CreateTrain()
     print('Creating train in function...')
     local location = config.spawns[math.random(1, #config.spawns)]
-    DeleteAllTrains() --doesnt fucking work
+    DeleteAllTrains()
     loadTrains()
     math.randomseed(GetGameTimer())
     local traintype = math.random(0, 23)
@@ -82,7 +82,6 @@ function CreateTrain()
     else
         print('^1Something went wrong while creating driver, id: '..ped)
     end
-    TriggerServerEvent('API:GlobalizeEvent', 'ENT:Blip', 1, 2, 1.0, 'Vonat', VehToNet(train), false, #getTrainCarts(train))
     print('Train created with id: '..train)
     SetTrainCruiseSpeed(train, config.speed)
     local object = {}
